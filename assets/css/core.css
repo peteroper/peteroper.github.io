@@ -1,0 +1,435 @@
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* CORE */
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+html,
+body{
+    overflow-x: hidden;
+}
+ol, ul{
+    list-style-position: inside;
+}
+html,
+body,
+header,
+footer,
+section{
+    width: 100%;
+}
+section,
+.heading,
+.container{
+    max-width: 896px;
+    margin: 0 auto;
+}
+#splash{
+    max-width: 100%;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    .container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+/*/////////////////////////*/
+@media (max-width: 440px) {
+    .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* QUOTE */
+/*//////////////////////////////////////////////////*/
+blockquote p{
+    margin: 0!important;
+}
+blockquote.basic{
+    border: 0!important;
+    padding: 0!important;
+}
+/*//////////////////////////////////////////////////*/
+/* HEADER */
+/*//////////////////////////////////////////////////*/
+header{
+    width: 1360px;
+    padding: 1rem 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+header h1{
+    display: flex;
+    margin: 0!important;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 200;
+    padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+}
+header h1 .img{
+    width: 24px!important;
+    height: 24px!important;
+    margin: 0!important;
+    padding: 0!important;
+    display: block;
+}
+header .close{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+/*/////////////////////////*/
+@media (min-width: 1440px) {
+    header{
+        left: 50%;
+        margin-left: -680px;
+    }
+}
+/*/////////////////////////*/
+@media (max-width: 1440px) {
+    header{
+        width: 100%;
+    }
+}
+/*/////////////////////////*/
+@media (max-width: 440px) {
+    .page-casestudy header,
+    .page-journal header{
+        height: 80px;
+    }
+    header .close{
+        height: 38px;
+        width: 38px;
+        top: 1rem;
+        right: 1.25rem;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* FLEX */
+/*//////////////////////////////////////////////////*/
+.btns,
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex .col{
+    flex: 1;
+    box-sizing:border-box;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    .flex{
+        flex-direction: column;
+    }
+    .container.flex{
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+}
+/*/////////////////////////*/
+@media (max-width: 768px) {
+    .dt-set{
+        display: none;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* BUTTON */
+/*//////////////////////////////////////////////////*/
+.button{
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    transform: translateY(-3px); /* Lift effect */
+}
+.button:active {
+    transform: translateY(0); /* Button returns to normal position */
+}
+#lang.button:hover{
+    transform: none;
+}
+.btns{
+    align-items: center;
+}
+.btns a:nth-child(2){
+    padding: 0!important;
+    border: 0;
+}
+.btns a:nth-child(2) i{
+    width: 36px;
+    height: 36px;
+    font-size: 36px!important;
+}
+.btns.sm a:nth-child(2) i{
+    width: 24px;
+    height: 24px;
+    font-size: 24px!important;
+}
+/*//////////////////////////////////////////////////*/
+/* IMAGE */
+/*//////////////////////////////////////////////////*/
+.img{
+    display: block;
+    transition: transform 0.5s ease-in-out;
+    background-position: 50%;
+    cursor: pointer;
+}
+.img-wrap .img:hover {
+    transform: scale(1.1);
+}
+a.img-wrap{
+    display: block;
+    overflow: hidden;
+}
+#journal .img-wrap{
+    aspect-ratio: 1/1;
+}
+/*//////////////////////////////////////////////////*/
+/* TRANSITION */
+/*//////////////////////////////////////////////////*/
+body{
+    transition: background 0.8s ease;
+    position: relative;
+}
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Apply blur effect */
+    opacity: 0.4; /* Fade the background image */
+    z-index: -1; /* Keep it behind the content */
+}
+#intro{
+    opacity: 0;
+    transition: opacity 0.8s ease-out,transform 0.8s ease-out;
+    transform: translateY(40px);
+}
+#intro.show{
+    opacity: 100%;
+    transform: translateY(0);
+}
+
+.bg-showcase #showcase .heading,
+.bg-journal #journal .heading,
+.bg-casestudy #casestudy .heading{
+    transition: opacity 0.8s ease-in-out;
+    opacity: 1;
+}
+#intro h2,
+#intro .button,
+#intro p{
+    transition: opacity 0.8s ease-in-out,transform 0.8s ease-in-out;
+    transform: translateY(20px);
+}
+/*//////////////////////////////////////////////////*/
+/* CASESTUDY */
+/*//////////////////////////////////////////////////*/
+.content h4 a,
+.content h3 a{
+    display: block;
+}
+.heading h2,
+.casestudy .content{
+    position: relative;
+}
+.casestudy .content:after{
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    margin-left: -2rem;
+    bottom: -2rem;
+    left: 50%;
+}
+.heading h2:before, 
+.heading h2:after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    top: 50%;
+}
+.heading h2::before {
+    left: 0;
+}
+.heading h2::after {
+    right: 0;
+}
+/*/////////////////////////*/
+@media (max-width: 768px) {
+    .heading h2:before, 
+    .heading h2:after {
+        width: 22%;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* JOURNAL */
+/*//////////////////////////////////////////////////*/
+#journal .heading h2:before, 
+#journal .heading h2:after {
+width: 25%;
+}
+#journal .flex{
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+}  
+#journal .flex .col{
+    max-width: 31%; 
+    flex: auto;
+    flex-shrink: 0; 
+}
+#journal .flex::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+#journal .content:after{
+    width: 2px;
+    height: auto;
+    left: 0;
+    margin-left: 0;
+    top: 0;
+    bottom: 0;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    #journal .flex{
+        flex-direction: row;
+    }
+}
+@media (max-width: 768px) {
+    #journal .heading h2:before, 
+    #journal .heading h2:after {
+        width: 17%;
+    }
+    #journal .flex .col{
+        max-width: 68%; 
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* SHOWCASE */
+/*//////////////////////////////////////////////////*/
+.img-wrap {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    overflow-x: auto;
+}
+.img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+/*//////////////////////////////////////////////////*/
+/* ENTRY ?? */
+/*//////////////////////////////////////////////////*/
+#entry .headline span{
+    font-size: 80px!important;
+}
+#entry p,
+#about p{
+    line-height: 160%;
+}
+#entry .flex{
+    gap: 6rem;
+}
+#entry .col .img {
+    aspect-ratio: 16/9!important;
+    width: 200%; /* 100% of container + 100% overflow */
+    position: relative;
+    display: block;
+}
+#entry .col1 .img {
+    left: -100%;
+}
+/*/////////////////////////*/
+#top{
+    width: 800px;
+}
+/*/////////////////////////*/
+.note{
+    padding: 2rem;
+    margin: 4rem 0;
+    font-style: italic;
+}
+.note .btns{
+    margin-top: 1rem;
+}
+/*//////////////////////////////////////////////////*/
+/* ABOUT */
+/*//////////////////////////////////////////////////*/
+#skills ul{
+    list-style-type: none;
+}
+#skills ul li{
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    position: relative;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+#skills ul li:after{
+    content: '';
+    width: 40px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+#skills ul{
+    margin-bottom: 2rem;
+}
+@media (min-width: 1180px) {
+    #about{
+        width: 1180px;
+    }
+}
+@media (min-width: 1024px) {
+    #about{
+        width: 1180px;
+    }
+    #about .col1{
+        width: 60%;
+    }
+    #about .col2{
+        width: 32%;
+    }
+}
