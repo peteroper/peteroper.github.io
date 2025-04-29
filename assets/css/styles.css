@@ -378,16 +378,21 @@ header .language a,
     .content
     header,
     .heading,
-    .container,
     body{
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
-}
-@media (max-width: 440px) {
+    #entry .container,
     section{
         padding-top: 4rem;
         padding-bottom: 4rem;
+    }
+}
+@media (max-width: 440px) {
+    #entry .container,
+    section{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
     #intro{
         padding-top: 6rem;
@@ -461,10 +466,16 @@ margin-bottom: 0;
 }
 /*/////////////////////////*/
 @media (max-width: 1024px) {
-footer .heading{
-    margin-left: 2rem; 
-    margin-right: 2rem;
+    footer .heading{
+        margin-left: 2rem; 
+        margin-right: 2rem;
+    }
 }
+@media (max-width: 768px) {
+    #entry .container .section,
+    #entry .headline h2{
+        margin-bottom: 2rem;
+    }
 }
 /*//////////////////////////////////////////////////*/
 #entry .flex{
@@ -489,9 +500,13 @@ header{
     #journal .flex{
         gap: 1.5rem;
     }
+    #entry .flex{
+        gap: 3rem;
+    }
 }
 /*/////////////////////////*/
 @media (max-width: 440px) {
+    #entry .headline h2,
     #journal .flex{
         gap: 1.25rem;
     }
@@ -622,9 +637,14 @@ h6{
     h2{
         font-size: 2rem;    
     }
+    #entry h2{
+        font-size: 1.75rem;
+    }
+    #entry h3,
     h3{
         font-size: 1.5rem;
     }
+    h4,
     #intro p{
         font-size: 1.25rem;
     }
