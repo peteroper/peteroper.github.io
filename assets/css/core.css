@@ -142,6 +142,7 @@ header .close{
 @media (max-width: 1024px) {
     .flex{
         flex-direction: column;
+        flex-wrap: nowrap;
     }
     .container.flex{
         width: 100%;
@@ -211,6 +212,127 @@ a.img-wrap{
 #journal .img-wrap{
     aspect-ratio: 1/1;
 }
+/*//////////////////////////////////////////////////*/
+/* CAROUSEL */
+/*//////////////////////////////////////////////////*/
+.carousel-wrap {
+    position: relative;
+    overflow: hidden;       
+    margin: auto;
+}
+
+.carousel-wrap .img{
+    margin-bottom: 0!important;
+}
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.slide{
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    position: relative;
+}
+.carousel::-webkit-scrollbar { display: none; }
+.carousel { -ms-overflow-style: none; scrollbar-width: none; }
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+.indicators.dark .dot {
+    background: rgba(0,0,0,0.6);
+}
+.indicators .dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+.indicators .dot.active {
+    background: white;
+}
+.indicators.dark .dot.active {
+    background: #000;
+}
+/*//////////////////////////////////////////////////*/
+/* BEFORE AFTER */
+/*//////////////////////////////////////////////////*/
+/* CSS */
+.ba-wrap {
+    margin: auto;
+    overflow: hidden;
+}
+.ba-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+.ba-wrap .img-ba {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img-ba.after {
+    width: 50%;            
+}
+.divider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-1px);
+    width: 2px;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    cursor: ew-resize;
+    z-index: 2;
+}
+  .ba-container .ba-label {
+    position: absolute;
+    top: 16px;
+    transform: translateY(-50%);
+    padding: 4px 8px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    z-index: 3;
+    pointer-events: none;
+  }
+/*//////////////////////////////////////////////////*/
+/* VIDEO */
+/*//////////////////////////////////////////////////*/
+.video-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 800px;   
+    margin: 0 auto;
+    background: #000; 
+    overflow: hidden;
+  }
+  .video-wrap::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+  }
+  .lazy-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; 
+  }
 /*//////////////////////////////////////////////////*/
 /* TRANSITION */
 /*//////////////////////////////////////////////////*/
@@ -357,32 +479,60 @@ width: 25%;
     transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 /*//////////////////////////////////////////////////*/
-/* ENTRY ?? */
+
+/* ENTRY */
+
 /*//////////////////////////////////////////////////*/
-#entry .headline span{
-    font-size: 80px!important;
+#entry p{
+    max-width: 696px;
 }
-#entry p,
-#about p{
-    line-height: 160%;
+#entry .headline h2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    flex: 0 0 auto;
 }
-#entry .flex{
-    gap: 6rem;
+#entry .headline h2:after{
+    content: '';
+    flex: 1 1 auto;
+    height: 2px;
 }
+/*//////////////////////////////////////////////////*/
+#entry ol.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 6rem;
+    padding: 0;
+    margin: 0;
+}
+#entry ol li {
+    flex: 0 0 44%;
+}
+/*//////////////////////////////////////////////////*/
+#entry .ba-wrap,
+#entry .carousel-wrap,
 #entry .col .img {
     aspect-ratio: 16/9!important;
-    width: 200%; /* 100% of container + 100% overflow */
     position: relative;
     display: block;
 }
-#entry .col1 .img {
-    left: -100%;
+@media (min-width: 1024px) {
+    #entry .col .ba-wrap,
+    #entry .col .carousel-wrap,
+    #entry .col .img {
+        width: 200%;
+    }
+    #entry .col1 .ba-wrap,
+    #entry .col1 .carousel-wrap {
+        left: -100%;
+    }
 }
-/*/////////////////////////*/
+/*//////////////////////////////////////////////////*/
 #top{
     width: 800px;
 }
-/*/////////////////////////*/
+/*//////////////////////////////////////////////////*/
 .note{
     padding: 2rem;
     margin: 4rem 0;
@@ -392,7 +542,9 @@ width: 25%;
     margin-top: 1rem;
 }
 /*//////////////////////////////////////////////////*/
+
 /* ABOUT */
+
 /*//////////////////////////////////////////////////*/
 #skills ul{
     list-style-type: none;

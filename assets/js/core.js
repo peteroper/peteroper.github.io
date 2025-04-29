@@ -97,3 +97,154 @@ document.addEventListener('DOMContentLoaded', function () {
       observer.observe(section);
     });
   });
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* CAROUSEL */
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.carousel-wrap').forEach(wrap => {
+    const carousel   = wrap.querySelector('.carousel');
+    const slides     = Array.from(wrap.querySelectorAll('.slide'));
+    const indicators = wrap.querySelector('.indicators');
+
+    // clear any old dots
+    indicators.innerHTML = '';
+
+    // only show indicators if more than one slide
+    if (slides.length > 1) {
+      slides.forEach((slide, idx) => {
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        dot.addEventListener('click', () => {
+          slide.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+        });
+        indicators.appendChild(dot);
+      });
+
+      const dots = Array.from(indicators.children);
+      if (dots[0]) dots[0].classList.add('active');
+
+      // on scroll, update active dot
+      carousel.addEventListener('scroll', () => {
+        const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+        dots.forEach(d => d.classList.remove('active'));
+        if (dots[index]) dots[index].classList.add('active');
+      });
+    } else {
+      indicators.style.display = 'none'; // hide indicators if only one slide
+    }
+  });
+});
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* BEFORE AFTER GALLERY */
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+window.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.ba-container');
+  const afterImg  = container.querySelector('.img-ba.after');
+  const divider   = container.querySelector('.divider');
+  let dragging    = false;
+  const spacing   = 8;
+
+  // 1) inject labels
+  ['before','after'].forEach(type => {
+    const lbl = document.createElement('div');
+    lbl.className   = `ba-label ${type}`;
+    lbl.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+    container.appendChild(lbl);
+  });
+  const beforeLabel = container.querySelector('.ba-label.before');
+  const afterLabel  = container.querySelector('.ba-label.after');
+
+  // 2) position & hide logic
+  function updateLabels(offsetX) {
+    const cw = container.clientWidth;
+    const bw = beforeLabel.offsetWidth;
+    const aw = afterLabel.offsetWidth;
+    const rawBefore = offsetX - bw - spacing;
+    const rawAfter  = offsetX + spacing;
+
+    // place them
+    beforeLabel.style.left = rawBefore + 'px';
+    afterLabel.style.left  = rawAfter  + 'px';
+
+    // hide if moving out of view
+    beforeLabel.style.display = (rawBefore < 0)                      ? 'none' : 'block';
+    afterLabel.style.display  = (rawAfter + aw > cw)                ? 'none' : 'block';
+  }
+
+  // initial center position
+  updateLabels(container.clientWidth / 2);
+
+  // 3) dragging handlers
+  const startDrag = e => {
+    e.preventDefault();
+    dragging = true;
+    document.body.style.cursor = 'ew-resize';
+  };
+  const onDrag = e => {
+    if (!dragging) return;
+    const rect    = container.getBoundingClientRect();
+    const clientX = e.clientX ?? e.touches[0].clientX;
+    let offsetX   = clientX - rect.left;
+    offsetX       = Math.max(0, Math.min(offsetX, rect.width));
+    const pct     = (offsetX / rect.width) * 100;
+
+    // move after-image & divider
+    afterImg.style.width = pct + '%';
+    divider.style.left   = pct + '%';
+
+    // reposition labels
+    updateLabels(offsetX);
+  };
+  const endDrag = () => {
+    dragging = false;
+    document.body.style.cursor = '';
+  };
+
+  // wire up events
+  divider.addEventListener('mousedown', startDrag);
+  window.addEventListener('mousemove', onDrag);
+  window.addEventListener('mouseup',   endDrag);
+
+  divider.addEventListener('touchstart', startDrag);
+  window.addEventListener('touchmove',  onDrag);
+  window.addEventListener('touchend',   endDrag);
+});
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* VIDEO */
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.querySelector('.lazy-video');
+
+  // swap in the src when it's about to be shown
+  const loadAndPlay = () => {
+    if (video.dataset.src) {
+      video.src = video.dataset.src;
+      video.removeAttribute('data-src');
+    }
+    video.play().catch(() => {/* play may fail if not muted/autoplay-policies */});
+  };
+
+  // only observe if IntersectionObserver is available
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadAndPlay();
+          obs.unobserve(video);
+        }
+      });
+    }, { threshold: 0.5 });
+    io.observe(video);
+  } else {
+    // fallback: load immediately
+    loadAndPlay();
+  }
+});
