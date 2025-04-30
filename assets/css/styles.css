@@ -683,13 +683,13 @@ h6{
     .img-wrap,
     .img{
         width: 100%;
-        aspect-ratio: 4/3;
+       /*aspect-ratio: 4/2.5;*/
     }
 }
 /*/////////////////////////*/
 @media (max-width: 768px) {
     #splash .img{
-        aspect-ratio: 2/1;    
+        aspect-ratio: 4/2.5;    
     }
 }
 /*/////////////////////////*/
@@ -717,15 +717,6 @@ h6{
     background-repeat: no-repeat;
 }
 /*//////////////////////////////////////////////////*/
-.content{
-    background-image: url(../img/casestudy-content.png);
-}
-.initial{
-    background-image: url(../img/casestudy-initial.png);
-}
-.homeplus{
-    background-image: url(../img/casestudy-homeplus.png);
-}
 .flip{
     background-image: url(../img/casestudy-flip.png);
 }
@@ -744,6 +735,16 @@ h6{
 #about .col2 .img{
     background-image: url(../img/about.png);
 }
-/*//////////////////////////////////////////////////*/
-
+/*/////////////////////////*/
+@media (max-width: 768px) {
+    .content.img{
+        background-image: url(../img/case-content-preview-mobi.png)!important;
+    }
+    .initial.img{
+        background-image: url(../img/case-initial-preview-mobi.png)!important;
+    }
+    .claim.img{
+        background-image: url(../img/case-claim-preview-mobi.png)!important;
+    }
+}
 /*//////////////////////////////////////////////////*/
