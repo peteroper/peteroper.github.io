@@ -521,6 +521,28 @@ width: 25%;
     #entry .col .ba-wrap,
     #entry .col .carousel-wrap,
     #entry .col .img {
+        width: 140%;
+    }
+    #entry .col1 .ba-wrap,
+    #entry .col1 .carousel-wrap {
+        left: -40%;
+    }
+}
+@media (min-width: 1280px) {
+    #entry .col .ba-wrap,
+    #entry .col .carousel-wrap,
+    #entry .col .img {
+        width: 168%;
+    }
+    #entry .col1 .ba-wrap,
+    #entry .col1 .carousel-wrap {
+        left: -68%;
+    }
+}
+@media (min-width: 1440px) {
+    #entry .col .ba-wrap,
+    #entry .col .carousel-wrap,
+    #entry .col .img {
         width: 200%;
     }
     #entry .col1 .ba-wrap,

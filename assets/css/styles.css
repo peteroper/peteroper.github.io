@@ -679,15 +679,13 @@ h6{
 .img-wrap {
     aspect-ratio: 2.35/1;
 }
+/*/////////////////////////*/
 @media (max-width: 768px) {
     .img-wrap,
     .img{
         width: 100%;
        /*aspect-ratio: 4/2.5;*/
     }
-}
-/*/////////////////////////*/
-@media (max-width: 768px) {
     #splash .img{
         aspect-ratio: 4/2.5;    
     }
@@ -737,12 +735,15 @@ h6{
 }
 /*/////////////////////////*/
 @media (max-width: 768px) {
+    #splash .content.img,
     .content.img{
         background-image: url(../img/case-content-preview-mobi.png)!important;
     }
+    #splash .initial.img,
     .initial.img{
         background-image: url(../img/case-initial-preview-mobi.png)!important;
     }
+    #splash .claim.img,
     .claim.img{
         background-image: url(../img/case-claim-preview-mobi.png)!important;
     }
