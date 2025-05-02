@@ -168,8 +168,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const rawAfter  = offsetX + spacing;
 
     // place them
-    beforeLabel.style.left = rawBefore + 'px';
-    afterLabel.style.left  = rawAfter  + 'px';
+    beforeLabel.style.left = rawAfter + 'px';
+    afterLabel.style.left  = rawBefore  + 'px';
 
     // hide if moving out of view
     beforeLabel.style.display = (rawBefore < 0)                      ? 'none' : 'block';

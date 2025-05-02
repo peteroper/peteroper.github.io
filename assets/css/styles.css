@@ -684,8 +684,9 @@ h6{
     .img-wrap,
     .img{
         width: 100%;
-       /*aspect-ratio: 4/2.5;*/
     }
+    .page-index .img-wrap,
+    .page-index .img,
     #splash .img{
         aspect-ratio: 4/2.5;    
     }
