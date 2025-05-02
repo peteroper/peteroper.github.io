@@ -326,7 +326,7 @@ a.img-wrap{
   .video-wrap::before {
     content: '';
     display: block;
-    padding-top: 56.25%;
+    padding-top: 63.25%;
   }
   .lazy-video {
     position: absolute;
