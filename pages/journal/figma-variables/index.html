@@ -41,79 +41,90 @@ FOOTER
             Refining Figma design tokens<br class="dt-set" /> for Developer handoff
         </h2>
         <p>Having worked with front-end code, I know how crucial refined and intuitive styling variables are for a smooth handoff and consistent implementation.</p>
-        <a class="button" style="display: none;"></a>
     </section>
     <!--section id="splash">
         <span class="img" style="background-image: url(/assets/img/journal-top-variables.png);"></span>
     </section-->
     <section id="entry">
-        <div class="container section1 flex">
-            <div class="col1 col">
-                <h4>Why this Matters</h4>
-                <p>I've worked as both a designer and developer, so I understand how crucial variables are for efficient scalability. But I also know they serve different purposes: designers need clear context and an understanding of what's available, while front-end developers need structured tokens and predictability to avoid second-guessing how to define values in their CSS.</p>
-                <blockquote>
-                    <p>"Tokens and variables aren't just technical details—they're the foundation of a strong design-dev partnership."</p>
-                </blockquote>
+        <div class="container">
+            <div class="section flex">
+                <div class="col1 col">
+                    <h4>Why this Matters</h4>
+                    <p>I've worked as both a designer and developer, so I understand how crucial variables are for efficient scalability. But I also know they serve different purposes: designers need clear context and an understanding of what's available, while front-end developers need structured tokens and predictability to avoid second-guessing how to define values in their CSS.</p>
+                    <blockquote>
+                        <p>"Tokens and variables aren't just technical details—they're the foundation of a strong design-dev partnership."</p>
+                    </blockquote>
+                </div>
+                <div class="col2 col">
+                    <div class="carousel-wrap">
+                        <div class="carousel">
+                            <span class="slide img" style="background-image: url(/assets/img/journal-variables-1.png);"></span>
+                        </div>
+                        <div class="indicators dark"></div>
+                    </div>
+                </div>
             </div>
-            <div class="col2 col">
-                <span class="img" style="background-image: url(/assets/img/journal-variables2.jpg);"></span>
+    
+            <div class="section flex">
+                <div class="col1 col">
+                    <h4>Background</h4>
+                    <p>The early phases of Asurion Home+ project involved quick localisation of an existing US product which had a comprehensive component and variable library, but a like for like approach wasnt possible due to evolving requirements for the Japanese service. We had to follow a specific style but also quickly adapt to create our own version. It didnt leave much room to assess things.</p>
+                </div>
+                <div class="col1 col">
+                    <h4>Breaking It Down</h4>
+                    <p>While the U.S. design system was robust, it lacked the contextual variables needed to efficiently manage colour in a new environment. Text styles didn’t translate well either—Japanese typography and layout rules required a different approach. Since we were working responsively, we also needed a more intuitive and flexible spacing system. As the product iterated rapidly, gaining autonomy over components became essential to meet the specific requirements set by the Japanese team for the local market.</p>
+                </div>
             </div>
-        </div>
-        <!--div class="heading container">
-            <span class="img"></span>
-        </div-->
-        <div class="container flex">
-            <div class="col1 col">
-                <h4>Background</h4>
-                <p>The early phases of Asurion Home+ project involved quick localisation of an existing US product which had a comprehensive component and variable library, but a like for like approach wasnt possible due to evolving requirements for the Japanese service. We had to follow a specific style but also quickly adapt to create our own version. It didnt leave much room to assess things.</p>
+    
+            <div class="section flex">
+                <div class="col1 col">
+                    <div class="carousel-wrap">
+                        <div class="carousel">
+                            <span class="slide img" style="background-image: url(/assets/img/journal-variables-1.png);"></span>
+                        </div>
+                        <div class="indicators dark"></div>
+                    </div>
+                </div>
+                <div class="col2 col">
+                    <h4>Figma Tokens and Variables</h4>
+                    <ol>
+                        <li>Reduced the broad US color set into a smaller, more manageable token list, while keeping the original naming convention so it would still align with the dev teams codebase.</li>
+                        <li>Integrated client modes into these colors, making it easy to toggle between different screen UIs.</li>
+                        <li>Applied these tokens contextually as color variables at a small scale—covering text, surfaces, borders, and icons.</li>
+                        <li>Built a responsive sizing system with specific breakpoints, so responsive screens could be easily toggled and adapted as needed.</li>
+                    </ol>
+                </div>
+            </div> 
+    
+            <div class="section flex">
+                <div class="col1 col">
+                    <h4>The Result</h4>
+                    <p>By organizing and structuring these variables, we created a set of CSS root variables that could be applied to a web app with multiple client instances. This gave developers a streamlined, consistent foundation to work from, making implementation smoother. Applying these variables across all screen UIs was a challenging task, but it ultimately eliminated inconsistencies, ensured a cohesive design implementation, and improved collaboration between design and development teams.</p>
+                </div>
+                <div class="col2 col">
+                    <h4>It's in the Details</h4>
+                    <p>The careful attention to these small details meant our design vision was much more accurately realized in the final product. And perhaps most importantly, developers didn't face unnecessary friction, ensuring a collaborative and efficient process from start to finish. It also freed the design team to focus more on problem-solving and UX, rather than getting bogged down by visual design details.</p>
+                </div>
+            </div>  
+    
+            <div class="carousel-wrap">
+                <div class="carousel">
+                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-1.png);"></span>
+                </div>
+                <div class="indicators dark"></div>
             </div>
-            <div class="col1 col">
-                <h4>Breaking It Down</h4>
-                <p>While the U.S. design system was robust, it lacked the contextual variables needed to efficiently manage colour in a new environment. Text styles didn’t translate well either—Japanese typography and layout rules required a different approach. Since we were working responsively, we also needed a more intuitive and flexible spacing system. As the product iterated rapidly, gaining autonomy over components became essential to meet the specific requirements set by the Japanese team for the local market.</p>
+            <div class="note">
+                <small>
+                    This case study is a snapshot — I’ve kept it focused to balance work, life, and clarity. <br class="dt-set" />
+                    Feel free to reach out if you'd like to learn more about the process or chat about design.
+                </small>
+                <nav class="btns sm">
+                    <a href="mailto:peter.roper.jp@gmail.com" class="button md outline" title="">Email me</a>
+                    <a href="https://www.linkedin.com/in/peter-roper/?originalSubdomain=jp" class="button outline" target="_blank">
+                        <i class="fa-brands fa-linkedin" style="font-size: 24px; color: #0A66C2;"></i>
+                    </a>
+                </nav>
             </div>
-        </div>
-        <div class="container section1 flex">
-            <div class="col1 col">
-                <span class="img" style="background-image: url(/assets/img/journal-variables3.jpg);"></span>
-            </div>
-            <div class="col2 col">
-                <h4>Figma Tokens and Variables</h4>
-                <ol>
-                    <li>Reduced the broad US color set into a smaller, more manageable token list, while keeping the original naming convention so it would still align with the dev teams codebase.</li>
-                    <li>Integrated client modes into these colors, making it easy to toggle between different screen UIs.</li>
-                    <li>Applied these tokens contextually as color variables at a small scale—covering text, surfaces, borders, and icons.</li>
-                    <li>Built a responsive sizing system with specific breakpoints, so responsive screens could be easily toggled and adapted as needed.</li>
-                </ol>
-            </div>
-        </div> 
-        <!--div class="heading container">
-            <span class="img"></span>
-        </div-->
-        <div class="container section1 flex">
-            <div class="col1 col">
-                <h4>The Result</h4>
-                <p>By organizing and structuring these variables, we created a set of CSS root variables that could be applied to a web app with multiple client instances. This gave developers a streamlined, consistent foundation to work from, making implementation smoother. Applying these variables across all screen UIs was a challenging task, but it ultimately eliminated inconsistencies, ensured a cohesive design implementation, and improved collaboration between design and development teams.</p>
-            </div>
-            <div class="col2 col">
-                <h4>It's in the Details</h4>
-                <p>The careful attention to these small details meant our design vision was much more accurately realized in the final product. And perhaps most importantly, developers didn't face unnecessary friction, ensuring a collaborative and efficient process from start to finish. It also freed the design team to focus more on problem-solving and UX, rather than getting bogged down by visual design details.</p>
-            </div>
-        </div>  
-
-        <div class="heading narrow container">
-            <span class="img" style="background-image: url(/assets/img/journal-variables4.jpg);"></span>
-        </div>  
-        <div class="note">
-            <small>
-                This case study is a snapshot — I’ve kept it focused to balance work, life, and clarity. <br class="dt-set" />
-                Feel free to reach out if you'd like to learn more about the process or chat about design.
-            </small>
-            <nav class="btns sm">
-                <a href="mailto:peter.roper.jp@gmail.com" class="button md outline" title="">Email me</a>
-                <a href="https://www.linkedin.com/in/peter-roper/?originalSubdomain=jp" class="button outline" target="_blank">
-                    <i class="fa-brands fa-linkedin" style="font-size: 24px; color: #0A66C2;"></i>
-                </a>
-            </nav>
         </div>
     </section>
     <footer>
