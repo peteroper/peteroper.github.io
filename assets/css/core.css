@@ -496,8 +496,10 @@ width: 25%;
     position: absolute;
     top: 0;
     left: 0;
-    width: auto;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    width: auto!important;
+    height: auto!important;
     transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 /*//////////////////////////////////////////////////*/
