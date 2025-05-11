@@ -103,15 +103,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.carousel-wrap').forEach(wrap => {
-    const carousel   = wrap.querySelector('.carousel');
-    const slides     = Array.from(wrap.querySelectorAll('.slide'));
-    const indicators = wrap.querySelector('.indicators');
+  document.querySelectorAll('.carousel-outer').forEach(outer => {
+    const wrap        = outer.querySelector('.carousel-wrap');
+    const carousel    = wrap.querySelector('.carousel');
+    const slides      = Array.from(wrap.querySelectorAll('.slide'));
+    const indicators  = wrap.querySelector('.indicators');
+    const description = outer.querySelector('.carousel-description');
 
-    // clear any old dots
     indicators.innerHTML = '';
 
-    // only show indicators if more than one slide
+    const updateDescription = (index) => {
+      const desc = slides[index]?.dataset.desc;
+
+      // Fade out, change text, then fade back in
+      description.classList.add('fade-out');
+      /*setTimeout(() => {*/
+        description.textContent = desc || '';
+        description.classList.remove('fade-out');
+     /* }, 75); // half of the 0.3s transition time*/
+    };
+
     if (slides.length > 1) {
       slides.forEach((slide, idx) => {
         const dot = document.createElement('div');
@@ -123,19 +134,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       const dots = Array.from(indicators.children);
-      if (dots[0]) dots[0].classList.add('active');
+      dots[0]?.classList.add('active');
+      updateDescription(0);
 
-      // on scroll, update active dot
       carousel.addEventListener('scroll', () => {
         const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
         dots.forEach(d => d.classList.remove('active'));
-        if (dots[index]) dots[index].classList.add('active');
+        dots[index]?.classList.add('active');
+        updateDescription(index);
       });
     } else {
-      indicators.style.display = 'none'; // hide indicators if only one slide
+      indicators.style.display = 'none';
+      updateDescription(0);
     }
   });
 });
+
+
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 

@@ -57,6 +57,7 @@ header .close,
 #entry p{
     opacity: 78%;    
 }
+.carousel-description,
 blockquote p,
 .casestudy .content p,
 #entry .heading p,
@@ -619,6 +620,7 @@ dt,
 .button{
     font-size: 1rem;
 }
+.carousel-description,
 .btns.sm .button,
 #about ul li,
 .headline p,
@@ -626,8 +628,9 @@ dt,
 small{
     font-size: 0.9rem;
 }
+.carousel-description,
 h6{
-    font-size: 0.7rem;    
+    font-size: 0.8rem;    
 }
 .button.sm{
     font-size: 0.6rem;
