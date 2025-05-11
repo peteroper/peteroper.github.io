@@ -492,7 +492,7 @@ width: 25%;
     overflow-x: auto;
     display: block;
 }
-.img-wrap img {
+/*.img-wrap img {
     position: absolute;
     top: 0;
     left: 0;
@@ -501,7 +501,7 @@ width: 25%;
     width: auto!important;
     height: auto!important;
     transition: transform 0.3s ease-in-out; /* Smooth transition */
-}
+}*/
 /*//////////////////////////////////////////////////*/
 
 /* ENTRY */
