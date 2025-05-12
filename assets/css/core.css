@@ -321,7 +321,7 @@ a.img-wrap{
     cursor: ew-resize;
     z-index: 2;
 }
-  .ba-container .ba-label {
+.ba-container .ba-label {
     position: absolute;
     top: 16px;
     transform: translateY(-50%);
@@ -332,7 +332,13 @@ a.img-wrap{
     border-radius: 3px;
     z-index: 3;
     pointer-events: none;
-  }
+}
+/*/////////////////////////*/
+@media (max-width: 440px) {
+    .ba-wrap{
+        display: none!important;
+    }
+}
 /*//////////////////////////////////////////////////*/
 /* VIDEO */
 /*//////////////////////////////////////////////////*/
