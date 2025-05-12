@@ -301,8 +301,9 @@ a.img-wrap{
     position: absolute;
     top: 0; 
     left: 0;
-    width: 100%; height: 100%;
-    background-size: cover;
+    width: 100%; 
+    height: 100%;
+    background-size: cover!important;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -491,6 +492,9 @@ width: 25%;
     position: relative;
     overflow-x: auto;
     display: block;
+}
+.img-wrap .img{
+    height: 100%;
 }
 /*.img-wrap img {
     position: absolute;
