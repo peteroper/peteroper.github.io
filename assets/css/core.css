@@ -538,8 +538,14 @@ width: 25%;
     padding: 0;
     margin: 0;
 }
-#entry ol li {
+#entry ol.flex li {
     flex: 0 0 44%;
+}
+#entry ol.flex.col3 {
+    gap: 1rem 4rem;
+}
+#entry ol.flex.col3 li {
+    flex: 0 0 28%;
 }
 /*//////////////////////////////////////////////////*/
 #entry .ba-wrap,
@@ -595,6 +601,16 @@ width: 25%;
 .note .btns{
     margin-top: 1rem;
 }
+
+.callout{
+    font-size: 0.8rem;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    margin: 1rem 0 0 0;
+  }
+  
 /*//////////////////////////////////////////////////*/
 
 /* ABOUT */

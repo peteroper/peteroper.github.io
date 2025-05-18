@@ -52,8 +52,9 @@ header .close,
 }
 /*/////////////////////////*/
 #entry li strong{
-    opacity: 88%;       
+    opacity: 1.2!important;       
 }
+#entry li,
 #entry p{
     opacity: 78%;    
 }
@@ -131,6 +132,9 @@ blockquote {
     border-color: #D1DADC;
     /*background-color: #F4F8FA;*/
 }
+.callout{
+    border-color: rgba(0, 0, 0, 0.25);
+}
 .note,
 header .language a{
     border-color: rgba(255, 255, 255, 0.25);
@@ -205,6 +209,7 @@ header .close,
 .heading h2:after{
     background-color: rgba(255, 255, 255, 0.24);
 }
+.callout,
 .page-casestudy .img,
 .page-journal .img,
 .page-index .img{
@@ -426,7 +431,9 @@ header .language a,
     }
 }
 /*//////////////////////////////////////////////////*/
-#entry .container .section,
+#entry .container .section{
+    margin-bottom: 6rem; 
+}
 #entry .headline h2{
     margin-bottom: 3rem;
 }
@@ -443,6 +450,7 @@ h2,
 h3{
     margin-bottom: 1.5rem;
 }
+li strong,
 ul,
 h4,
 h5,
@@ -455,6 +463,7 @@ p{
 .heading h3{
     margin-bottom: 0.75rem;
 }
+
 h6,
 ol li, ul li{
     margin-bottom: 0.5rem;
