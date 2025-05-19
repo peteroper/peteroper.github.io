@@ -214,14 +214,19 @@ FOOTER
                 <div class="section flex">
                     <div class="col1 col">
                         <h4>Screen Templates</h4>
-                        
+                        <p>Creating specific breakpoint UI wasn’t possible early on, but became a priority once dev syncing increased. I also supported the QA team with early design inspection—flagging visual inconsistencies that can sometimes go unnoticed.</p>
+                        <p>I enjoyed this part of the process. It came together smoothly by setting fixed screen widths per breakpoint, then applying template spacing—body, columns, rows—based on those values. Paired with responsive text styles, this approach gave us clean, reliable templates.</p>
+
+                        <p class="callout"><b>Issue</b>: Figma doesn’t support percentage widths, so if layout columns change, each breakpoint needs its own screen. The upside is that this doubles as documentation.</p>
                     </div>
                     <div class="col2 col">
                         <div class="carousel-outer">
                             <div class="carousel-wrap">
                                 <div class="carousel">
-                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-responsivetemps.png);" data-desc="Solution : scalable responsive template using breakpoint width & spacing"></span>
                                     <span class="slide img" style="background-image: url(/assets/img/journal-variables-breakpoints.png);" data-desc="Solution : scalable parent frame/layer using breakpoint spacing"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-responsivetemps2.png);" data-desc="Solution : scalable responsive template using breakpoint width & spacing"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-responsivetemps.png);" data-desc="Solution : scalable responsive template using breakpoint width & spacing"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-responsivetemps3.png);" data-desc="Solution : scalable responsive template using breakpoint width & spacing"></span>
                                 </div>
                                 <div class="indicators"></div>
                             </div>
@@ -264,10 +269,11 @@ FOOTER
                         <div class="carousel-outer">
                             <div class="carousel-wrap">
                                 <div class="carousel">
-                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-modecolor.png);" data-desc="Example of color theming using variable modes"></span>
-                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-modetextstyle.png);" data-desc="Example text styles generated from variable modes"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-userflow1.png);" data-desc="Example of full userflow"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-userflow2.png);" data-desc="Example of sectioned flow"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-userflow3.png);" data-desc="Example variants for QA and TA teams"></span>
                                 </div>
-                                <div class="indicators"></div>
+                                <div class="indicators dark"></div>
                             </div>
                             <div class="carousel-description"></div>
                         </div>
@@ -279,19 +285,19 @@ FOOTER
                         <div class="carousel-outer">
                             <div class="carousel-wrap">
                                 <div class="carousel">
-                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-modecolor.png);" data-desc="Example of color theming using variable modes"></span>
-                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-modetextstyle.png);" data-desc="Example text styles generated from variable modes"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-handoff1.png);" data-desc="Example of handoff file structure"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-handoff2.png);" data-desc="Example ready for dev"></span>
                                 </div>
-                                <div class="indicators"></div>
+                                <div class="indicators dark"></div>
                             </div>
                             <div class="carousel-description"></div>
                         </div>
                     </div>
                     <div class="col2 col">
                         <h4>Handoff</h4>
-                        <p>Handoff planning kicked off some healthy internal debates. I initially pushed for a centralised, phased handoff file—something clean that external teams could check without needing context-switching. But in the end, we aligned on splitting the work into focused design files per section (like enrollment, login, myPortal).</p>
-                        <p>Each of those files was structured with two core parts: screens ready for dev, and those still in exploration or mid-iteration. Eventually, we also relocated relevant section components to live within those same files, making things more self-contained.</p>
-                        <p>This setup made things compact and easier to manage in small focused teams—but the tradeoff was that external teams had to stay sharp and know which files to check, instead of having one central reference.</p>
+                        <p>Defining handoff rules led to some healthy back-and-forth, as each project had its own habits. I leaned toward a central sprint handoff file, with ideation staying in section-specific files like enrollment, login, and myPortal. In the end, we made those section files the main handoff locations. While it meant more Figma links to manage for external teams, it gave designers clearer ownership over their areas.</p>
+                        <p>Each file had three main parts: dev-ready, in-progress, and exploration. This structure made it easier for others to understand both where things stood and how they were evolving.</p>
+                        <p class="callout"><b>Note</b>: To get the most out of Dev Mode, it's important to clearly assign screens as 'ready for dev' and ensure they’re built using components.</p>
                     </div>
                 </div>
 
