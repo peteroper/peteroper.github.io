@@ -760,5 +760,9 @@ h6{
     .claim.img{
         background-image: url(../img/case-claim-preview-mobi.png)!important;
     }
+    #splash .system.img,
+    .system.img{
+        background-image: url(../img/case-system-preview-mobi.png)!important;
+    }
 }
 /*//////////////////////////////////////////////////*/
