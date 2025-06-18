@@ -1,0 +1,405 @@
+<html> 
+<head>
+<title>Design System | Peter Roper Design</title>
+<meta name="viewport" content="width=device-width,	 initial-scale=1.0">
+<meta http-equiv="content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="noindex, nofollow">
+<!--meta name="google-site-verification" content="" /-->
+<!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'-->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<meta name="theme-color" content="#29444C">
+<link rel="apple-touch-icon" href="https://assets/imgs/icon-apple.jpg">
+<meta property="og:image" content="https://assets/imgs/icon-og.jpg">
+<link rel="stylesheet" href="../../../assets/css/core.css">
+<link rel="stylesheet" href="../../../assets/css/styles.css">
+<script src="../../../assets/js/core.js"></script>
+<!--
+HEADER
+1. HERO
+2. SERVICES
+3. BENEFITS
+4. DETAILS
+5. TESTIMONIALS
+FOOTER
+-->
+</head>
+<body class="page-casestudy">
+    <!-- HEADER  -->
+    <header>
+        <div class="brand">
+            <h1>Peter Roper <span class="img" style="background-image: url(/assets/img/fox.png);"></span></h1>
+        </div>
+        <a href="/cogs/" class="close"><span class="material-icons">close</span></a>
+    </header>
+    <section id="intro" class="content">
+        <h2>Design System:<br class="dt-set" />  Scaling and Localizing the US Team’s Design System for Japan</h2>
+        <p>How I evolved an inconsistent early design phase into a foundational design system tailored for the Japanese team.</p>
+        <a class="button" style="display: none;"></a>
+    </section>
+    <section id="splash">
+        <span class="img" style="background-image: url(/assets/img/case-system-splash.png);"></span>
+    </section>
+    <section id="entry">
+
+        <div id="background" class="container">
+            <div class="headline">
+                <h2><span>Background</span></h2>
+            </div>
+            <div class="section flex">
+                <div class="col1 col">
+                    <p>In the early stages of the Asurion Home+ project, we were tasked with localising a comprehensive US design system. While the system offered a strong foundation, it wasn’t directly compatible with the evolving requirements of the Japanese market.</p>
+                    <p>After the first development phase, two of my design teammates left. With a New Year pause approaching and key teammates departing, I took the opportunity to consolidate our design work, resolve inconsistencies, and build a foundation that would support incoming team members.</p>
+                </div>
+                <div class="col2 col">
+                    <div class="carousel-outer">
+                    <div class="carousel-wrap">
+                        <div class="carousel">  
+                            <span class="slide img" style="background-image: url(/assets/img/journal-variables-cover.png);" data-desc="Figma Design Cover"></span>
+                        </div>
+                        <div class="indicators dark"></div>
+                    </div>
+                    <div class="carousel-description"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h3>Problems in Initial Design Phases</h3>
+                <p>During Phase 1, each designer loosely followed the US style guide while also making quick, unsystematic adaptations to meet fast-changing needs. This approach led to inconsistencies and made alignment difficult.</p>
+                <ol class="flex col3">
+                    <li>
+                        <strong>No Contextual Variables</strong>
+                        <p>The U.S. design system lacked the contextual variables needed to efficiently manage colour in a new environment. Text styles didn’t translate well either—Japanese typography and layout rules required a different approach.</p>
+                    </li>
+                    <li>
+                        <strong>Variable Inconsistencies</strong>
+                        <p>While working on our own sections of the app, we had to quickly interpret how to use certain colours and spacing values. This produced inconsistencies as we neared the end of the phase and began aligning more closely.</p>
+                    </li>
+                    <li>
+                        <strong>Component Management</strong>
+                        <p>We needed to adapt US components to our own regions requirements, but with mixed experience across the team, much of the UI wasn’t built using reusable components—making scale and maintena</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        
+        <div id="foundations" class="container">
+            <div class="headline">
+                <h2><span>System Foundations</span></h2>
+            </div>
+
+            <div class="section">
+                <p>With experience as both a designer and developer, I understood how crucial variables are for scalability—not just for speed, but for clarity between design and code. But I also know they serve different purposes: designers need clear context and an understanding of what's available, while front-end developers need structured tokens and predictability to avoid second-guessing how to define values in their CSS.</p>
+                 <blockquote>
+                    <p>"Tokens and variables aren't just technical details—they're the foundation of a strong design-dev partnership."</p>
+                </blockquote>
+            </div> 
+
+            <div class="section flex">
+                <div class="col1 col">
+                    <h4>Color Tokens and Variables</h4>
+                    <ul>
+                        <li>
+                            Reduced the broad US colour set into a smaller, more manageable token list, while referencing the original naming convention so it would still align with the dev team's codebase.
+                        </li>
+                        <li>
+                            Integrated client modes into these colours, making it easier to create client screen versions by toggling the screen mode.
+                        </li>
+                        <li>
+                            Applied these tokens contextually as colour variables at a small scale—covering text, surfaces, borders, and icons.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col2 col">
+                    <div class="carousel-outer">
+                        <div class="carousel-wrap">
+                            <div class="carousel">
+                                <span class="slide img" style="background-image: url(/assets/img/journal-variables-colortokens.png);" data-desc="Example of simple color tokens"></span>
+                                <span class="slide img" style="background-image: url(/assets/img/journal-variables-colorvariables1.png);" data-desc="Example of contextual color variables"></span>
+                                <span class="slide img" style="background-image: url(/assets/img/journal-variables-colorvariables2.png);" data-desc="Example of contextual color variables"></span>
+                                <span class="slide img" style="background-image: url(/assets/img/journal-variables-modecolor.png);" data-desc="Example of color theming using variable modes"></span>
+                            </div>
+                            <div class="indicators dark"></div>
+                        </div>
+                        <div class="carousel-description"></div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="section flex">
+                <div class="col1 col">
+                    <div class="carousel-outer">
+                        <div class="carousel-wrap">
+                            <div class="carousel">
+                                <span class="slide img" style="background-image: url(/assets/img/journal-variables-typography.png);" data-desc="Example of Typography"></span>
+                            </div>
+                            <div class="indicators dark"></div>
+                        </div>
+                        <div class="carousel-description"></div>
+                    </div>
+                </div>
+                <div class="col2 col">
+                    <h4>Typography</h4>
+                    <ul>
+                        <li>Added font family modes to enable screen-level font switching.</li>
+                    </ul>            
+                    <p class="callout"><strong>Issues:</strong> rem sizing isn’t directly supported in Figma, requiring documentation to map styles to CSS root values.</p>
+                </div>
+            </div> 
+            
+            <div class="section flex">
+                <div class="col1 col">
+                    <h4>Breakpoints: Sizing & Spacing</h4>
+                    <ul>
+                        <li>Built a responsive system with breakpoints for adaptable screens.</li>
+                        <li>Defined spacing, typography, and padding values at each breakpoint.</li>
+                    </ul>
+                    <p><strong>Issues:</strong> ghost modes may persist after syncing, creating confusion in handoff.</p>
+                </div>
+                <div class="col2 col">
+                    <div class="carousel-outer">
+                        <div class="carousel-wrap">
+                            <div class="carousel">
+                                <span class="slide img" style="background-image: url(/assets/img/journal-variables-breakpoint2.png);" data-desc="Example of font sizing across breakpoints"></span>
+                                <span class="slide img" style="background-image: url(/assets/img/journal-variables-breakpoint1.png);" data-desc="Example of spacing sizing across breakpoints"></span>
+                            </div>
+                            <div class="indicators dark"></div>
+                        </div>
+                        <div class="carousel-description"></div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="section flex">
+                <div class="col1 col">
+                    <div class="carousel-outer">
+                        <div class="carousel-wrap">
+                            <div class="carousel">
+                                <span class="slide img" style="background-image: url(/assets/img/journal-variables-modetextstyle.png);" data-desc="Example text styles generated from variable modes"></span>
+                            </div>
+                            <div class="indicators dark"></div>
+                        </div>
+                        <div class="carousel-description"></div>
+                    </div>
+                </div>
+                <div class="col2 col">
+                    <h4>Text Styles</h4>
+                    <!--p>I have a lot of hands-on experience working with scalable CSS, so my main objective with text styles was to ensure that font size and font family were controlled by breakpoint variables.</p-->
+                    <ul>
+                        <li>It’s a great moment to be intentional about how you define bold fonts for headings and body styles.</li>
+                        <li>H1~H4 and standard text styles are universal, but I found each designer has their own way of labelling smaller body text—such as callout, note. It’s important to align as a group since this is a context designers will use daily.</li>
+                    </ul>
+                    <p class="callout"><strong>Issues:</strong> Line-height and letter-spacing can’t be tokenised as percentages in Figma.</p>
+                </div>
+            </div> 
+            
+            <div class="section">
+                <h3>System Impact</h3>
+                <p>By organising and structuring these variables, we had a system in place which—after aligning with the dev team—created a set of CSS root variables that could be applied to the web app with multiple client instances.</p>
+                <p>This gave developers a streamlined, consistent foundation to work from, making implementation smoother. Applying these variables across all screen UIs was a challenging task, but it ultimately eliminated inconsistencies, ensured cohesive design implementation, and improved collaboration between design and development teams.</p>
+            </div>
+        </div>
+
+        <div id="system" class="container">
+
+            <div class="section">
+                <div class="headline">
+                    <h2><span>Interface Design</span></h2>
+                </div>
+
+                <div class="section flex">
+                    <div class="col1 col">
+                        <h4>Screen Templates</h4>
+                        <p>Creating specific breakpoint UI wasn’t possible early on, but became a priority once dev syncing increased. I also supported the QA team with early design inspection—flagging visual inconsistencies that can sometimes go unnoticed.</p>
+                        <p>I enjoyed this part of the process. It came together smoothly by setting fixed screen widths per breakpoint, then applying template spacing—body, columns, rows—based on those values. Paired with responsive text styles, this approach gave us clean, reliable templates.</p>
+
+                        <p class="callout"><b>Issue</b>: Figma doesn’t support percentage widths, so if layout columns change, each breakpoint needs its own screen. The upside is that this doubles as documentation.</p>
+                    </div>
+                    <div class="col2 col">
+                        <div class="carousel-outer">
+                            <div class="carousel-wrap">
+                                <div class="carousel">
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-breakpoints.png);" data-desc="Solution : scalable parent frame/layer using breakpoint spacing"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-responsivetemps2.png);" data-desc="Solution : scalable responsive template using breakpoint width & spacing"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-responsivetemps
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    .png);" data-desc="Solution : scalable responsive template using breakpoint width & spacing"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-responsivetemps3.png);" data-desc="Solution : scalable responsive template using breakpoint width & spacing"></span>
+                                </div>
+                                <div class="indicators"></div>
+                            </div>
+                            <div class="carousel-description"></div>
+                        </div>
+                    </div>   
+                </div>
+
+                <div class="section flex">
+                    <div class="col1 col">
+                        <div class="carousel-outer">
+                            <div class="carousel-wrap">
+                                <div class="carousel">
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-headercomp.png);" data-desc="Solution : scalable responsive component using breakpoint spacing"></span>
+                                </div>
+                                <div class="indicators"></div>
+                            </div>
+                            <div class="carousel-description"></div>
+                        </div>
+                    </div>
+                    <div class="col2 col">
+                        <h4>Component Development</h4>
+                        <p>I built out the desktop components ahead of two new designers joining. The goal was to set up something clean and scalable, so they could slot in and start contributing without friction.</p>
+                        <p>Component ownership was shared—each designer looked after their slice of the app. That structure kept things moving, encouraged accountability, and made it easier to grow the system without it falling apart. The early groundwork gave us a foundation to align on patterns and evolve them together.</p>
+                        <p class="callout"><strong>Note</strong> Using sectioned components and avoiding inline UI makes Dev Mode’s version comparison tools far more effective. It ensures cleaner diffs, clearer history, and easier validation during handoff.</p>
+                    </div>
+                </div>
+                
+                <div class="section flex">
+                    <div class="col1 col">
+                        <h4>Userflow</h4>
+                        <p>Early on, handoff was split across multiple phased files, which made it tricky to track the latest screen versions and increased the risk of misalignment as the product grew.</p>
+                        <p>From past experience, I knew that keeping one central userflow was key. It gives everyone—design, TA, QA, dev—a shared overview of all screens, and latest changes. It also gave me, and the other designers, a reliable space  stay aligned on design intent.</p>
+                        <ul>
+                            <li>I used Figma auto layout to define sections and screen flows, allowing the structure to grow and adapt without excessive manual rework.</li>
+                            <li>Instead of resource-heavy flowline widgets, I overlaid FigJam arrows framed across the screen groups. Sectioning meant I could move arrows in groups, keeping the flow lightweight and manageable.</li>
+                        </ul>
+                    </div>
+                    <div class="col2 col">
+                        <div class="carousel-outer">
+                            <div class="carousel-wrap">
+                                <div class="carousel">
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-userflow1.png);" data-desc="Example of full userflow"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-userflow2.png);" data-desc="Example of sectioned flow"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-userflow3.png);" data-desc="Example variants for QA and TA teams"></span>
+                                </div>
+                                <div class="indicators dark"></div>
+                            </div>
+                            <div class="carousel-description"></div>
+                        </div>
+                    </div>   
+                </div>
+
+                <div class="section flex">
+                    <div class="col1 col">
+                        <div class="carousel-outer">
+                            <div class="carousel-wrap">
+                                <div class="carousel">
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-handoff1.png);" data-desc="Example of handoff file structure"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-variables-handoff2.png);" data-desc="Example ready for dev"></span>
+                                </div>
+                                <div class="indicators dark"></div>
+                            </div>
+                            <div class="carousel-description"></div>
+                        </div>
+                    </div>
+                    <div class="col2 col">
+                        <h4>Handoff</h4>
+                        <p>Defining handoff rules led to some healthy back-and-forth, as each project had its own habits. I leaned toward a central sprint handoff file, with ideation staying in section-specific files like enrollment, login, and myPortal. In the end, we made those section files the main handoff locations. While it meant more Figma links to manage for external teams, it gave designers clearer ownership over their areas.</p>
+                        <p>Each file had three main parts: dev-ready, in-progress, and exploration. This structure made it easier for others to understand both where things stood and how they were evolving.</p>
+                        <p class="callout"><b>Note</b>: To get the most out of Dev Mode, it's important to clearly assign screens as 'ready for dev' and ensure they’re built using components.</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="devmode" class="container">
+                <div class="headline">
+                    <h2><span>Dev Alignment</span></h2>
+                </div>
+                <div class="section flex">
+                    <div class="col1 col">
+                        <h4>A closer look at Dev Mode</h4>
+                        <p>As part of an initiative to strengthen the design-to-dev handoff, I integrated Figma's Dev Mode more intentionally into our shared workflow. It quickly surfaced gaps in our current process—from version control to inconsistent component usage—and revealed that Dev Mode offered far more than just inspection tools.</p>
+                    <p>I began to introduce key features like:</p>
+                    </div>
+                    <div class="col2 col">
+                        <div class="carousel-outer">
+                            <div class="carousel-wrap">
+                                <div class="carousel">
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-devmode1.png);"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-devmode2.png);" data-desc="Example of compare version history"></span>
+                                    <span class="slide img" style="background-image: url(/assets/img/journal-devmode3.png);" data-desc="Example of component playground"></span>
+                                </div>
+                                <div class="indicators"></div>
+                            </div>
+                            <div class="carousel-description"></div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="section">
+                    <ul class="flex">
+                        <li class="col" style="list-style-type: none;">
+                            <h5>Compare</h5>
+                            <p>enabled version tracking of handoff-ready screens, helping teams validate updates without manual comparisons.</p>
+                        </li>
+                        <li class="col" style="list-style-type: none;">
+                            <h5>Component Playground</h5>
+                            <p>provided developers and QA with a live preview of all component variants, bridging gaps between design intention and actual implementation.</p>
+                        </li>
+                    </ul>
+                    <p>This approach improved transparency across handoff touchpoints and helped build better alignment between design and engineering.</p>
+                </div>
+            </div>
+
+            <div id="outcome" class="container">
+                <div class="headline">
+                    <h2><span>Outcome</span></h2>
+                </div>
+
+                <div class="section flex">
+                    <div class="col1 col">
+                        <h4>It's in the Details</h4>
+                        <p>The careful attention to these small details meant our design vision was much more accurately realised in the final product. And perhaps most importantly, developers didn't face unnecessary friction, ensuring a collaborative and efficient process from start to finish. It also freed the design team to focus more on problem-solving and UX, rather than getting bogged down by visual design details.</p>   
+                    </div>
+                    <div class="col2 col">
+                        <h4>Next Actions</h4>
+                        <p>I plan to deepen my understanding of how to connect design systems into tools like Storybook. Specifically, I want to explore how to link Figma tokens or component documentation with live components in Storybook.</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <h4>Takeaways</h4>
+                    <ul class="flex">
+                        <li class="col" style="list-style-type: none;">
+                             <strong>Section Components Hold Up the System</strong>
+                            <p>Section components allow you to scale with more confidence, while maintaining traceability across updates. They create clear units of UI that are easier to version, inspect, and test—especially when integrated with dev mode and component libraries.</p>
+                        </li>
+                        <li class="col" style="list-style-type: none;">
+                            <strong>Concise Style Variables Aid Creation</strong>
+                            <p>Using a smaller set of well-defined variables helped limit inconsistencies and supported more deliberate design decisions. This encouraged designers to focus on intent and hierarchy, rather than surface-level tweaks.</p>    
+                        </li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="note">
+                <small>
+                    This case study is a snapshot — I’ve kept it focused to balance work, life, and clarity. <br class="dt-set" />
+                    Feel free to reach out if you'd like to learn more about the process or chat about design.
+                </small>
+                <nav class="btns sm">
+                    <a href="mailto:peter.roper.jp@gmail.com" class="button md outline" title="">Email me</a>
+                    <a href="https://www.linkedin.com/in/peter-roper/?originalSubdomain=jp" class="button outline" target="_blank">
+                        <i class="fa-brands fa-linkedin" style="font-size: 24px; color: #0A66C2;"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <h5>Next Journal</h4>
+            <h2><a href="/cogs/pages/journal/design-inspection/">Syncing a Design inspection alongside UAT</a>
+        </div>
+        
+    </footer>
+</body>
+</html>
