@@ -765,11 +765,11 @@ h6{
         background-image: url(../img/case-system-preview-mobi.png)!important;
     }
     #splash .paypay.img,
-    .system.img{
+    .paypay.img{
         background-image: url(../img/case-topup-preview-mobi.png)!important;
     }
     #splash .yodobashi.img,
-    .system.img{
+    .yodobashi.img{
         background-image: url(../img/case-ecom-preview-mobi.png)!important;
     }
 }
