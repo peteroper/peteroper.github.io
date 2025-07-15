@@ -764,5 +764,13 @@ h6{
     .system.img{
         background-image: url(../img/case-system-preview-mobi.png)!important;
     }
+    #splash .paypay.img,
+    .system.img{
+        background-image: url(../img/case-topup-preview-mobi.png)!important;
+    }
+    #splash .yodobashi.img,
+    .system.img{
+        background-image: url(../img/case-ecom-preview-mobi.png)!important;
+    }
 }
 /*//////////////////////////////////////////////////*/
